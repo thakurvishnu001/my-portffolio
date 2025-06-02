@@ -1,0 +1,245 @@
+/* Responsive Styles */
+
+/* Mobile-first approach */
+@media only screen and (max-width: 768px) {
+  /* Typography */
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  .section-title .title-bg {
+    font-size: 3rem;
+  }
+  
+  /* Header & Navigation */
+  header {
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right var(--transition-normal);
+    z-index: 99;
+    box-shadow: var(--shadow-xl);
+  }
+  
+  nav.active {
+    right: 0;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+  }
+  
+  .nav-link {
+    font-size: 1.25rem;
+  }
+  
+  .menu-toggle {
+    display: flex;
+    z-index: 100;
+  }
+  
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* Hero Section */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-8);
+    padding-top: var(--space-12);
+  }
+  
+  .hero-text h1 {
+    margin-bottom: var(--space-2);
+  }
+  
+  .hero-cta {
+    justify-content: center;
+    margin-top: var(--space-6);
+  }
+  
+  .hero-image {
+    height: 300px;
+  }
+  
+  .profile-card {
+    width: 240px;
+    height: 300px;
+  }
+  
+  /* About Section */
+  .about-content {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  
+  .about-image-container,
+  .about-text {
+    max-width: 100%;
+  }
+  
+  .about-image-wrapper {
+    height: 350px;
+  }
+  
+  .personal-info {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Skills Section */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Projects Section */
+  .projects-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  /* Timeline */
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-dot {
+    left: 30px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+  
+  /* Contact Section */
+  .contact-content {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  
+  .contact-info,
+  .contact-form-container {
+    max-width: 100%;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Hero Section */
+  .hero-content {
+    padding: 0 var(--space-6);
+  }
+  
+  /* About Section */
+  .about-content {
+    padding: 0 var(--space-6);
+    gap: var(--space-6);
+  }
+  
+  .about-image-container {
+    max-width: 300px;
+  }
+  
+  /* Skills Section */
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Projects Section */
+  .projects-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    padding: 0 var(--space-6);
+  }
+  
+  /* Contact Section */
+  .contact-content {
+    padding: 0 var(--space-6);
+  }
+}
+
+/* Laptops and Desktops */
+@media only screen and (min-width: 1025px) {
+  /* Hero Section */
+  .hero-content {
+    padding: 0 var(--space-6);
+  }
+  
+  /* Projects Section */
+  .projects-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    padding: 0 var(--space-6);
+  }
+  
+  /* Contact Section */
+  .contact-content {
+    display: flex;
+    gap: var(--space-12);
+    padding: 0 var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-info {
+    flex: 1;
+  }
+  
+  .contact-form-container {
+    flex: 2;
+  }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+  
+  .hero-content,
+  .about-content,
+  .skills-content,
+  .projects-content,
+  .contact-content {
+    max-width: 1400px;
+  }
+}
+
+/* For devices with hover capability */
+@media (hover: hover) {
+  .cursor, .cursor-follower {
+    display: block;
+  }
+}
